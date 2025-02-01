@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public static ScoreManager instance;
 
     Rigidbody2D rb;
     [SerializeField] ObjectBehaviour objectBehaviour;

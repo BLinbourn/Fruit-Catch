@@ -178,3 +178,4 @@ MonoBehaviour:
   - {fileID: 5309960157269700463, guid: d24d4892e83ab1f40a0c183f0d7ccaf3, type: 3}
   - {fileID: 2876477798231761392, guid: 165708f6c7e9014488aef792c595f5a2, type: 3}
   - {fileID: 2526997538550105147, guid: 563393a4798e54442b7b07cd7ae1c831, type: 3}
+  gameOver: 0

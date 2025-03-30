@@ -7,7 +7,8 @@ public class PlayerController : MonoBehaviour
     public static ScoreManager instance;
 
     Rigidbody2D rb;
-    [SerializeField] ObjectBehaviour objectBehaviour;
+
+    public ObjectBehaviour objectBehaviour;
 
     float playerSpeed = 150f;
     float inputHorizontal;
@@ -28,7 +29,7 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if(inputHorizontal != 0)
+        if (inputHorizontal != 0 && ObjectBehaviour.instance.gameOver == false)
         {
             rb.AddForce(new Vector2(inputHorizontal * playerSpeed, 0));
         }

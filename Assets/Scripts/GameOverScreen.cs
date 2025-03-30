@@ -18,7 +18,7 @@ public class GameOverScreen : MonoBehaviour
     {
         SceneManager.LoadScene("First Game");
         ScoreManager.score = 0;
-        ObjectBehaviour.gameOver = false;
+        ObjectBehaviour.instance.gameOver = false;
     }
 
     public void ExitButton()

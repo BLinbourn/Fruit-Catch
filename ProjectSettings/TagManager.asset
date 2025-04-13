@@ -11,6 +11,7 @@ TagManager:
   - Melon
   - Pineapple
   - Strawberry
+  - Box
   layers:
   - Default
   - TransparentFX

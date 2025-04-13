@@ -11,6 +11,8 @@ public class ScoreManager : MonoBehaviour
     public Text HighscoreText;
 
     public static int score = 0;
+    public int scoreCounter;
+    public int scoreBoxCounter;
     int highscore = 0;
 
     private void Awake()
@@ -32,26 +34,38 @@ public class ScoreManager : MonoBehaviour
         {
             case "Apple":
                 score += 1;
+                scoreCounter += 1;
+                scoreBoxCounter += 1;
                 break;
             case "Banana":
                 score += 2;
+                scoreCounter += 2;
+                scoreBoxCounter += 2;
                 break;
             case "Cherry":
                 score += 3;
+                scoreCounter += 3;
+                scoreBoxCounter += 3;
                 break;
             case "Strawberry":
                 score += 4;
+                scoreCounter += 4;
+                scoreBoxCounter += 4;
                 break;
             case "Pineapple":
                 score += 5;
+                scoreCounter += 5;
+                scoreBoxCounter += 5;
                 break;
             case "Melon":
                 score += 6;
+                scoreCounter += 6;
+                scoreBoxCounter += 6;
                 break;
         }
 
         ScoreText.text = "Score: " + score.ToString();
-
+       
         if (highscore < score)
         {
             PlayerPrefs.SetInt("highscore", score);

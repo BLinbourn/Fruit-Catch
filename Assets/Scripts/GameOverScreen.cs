@@ -6,12 +6,16 @@ using UnityEngine.SceneManagement;
 
 public class GameOverScreen : MonoBehaviour
 {
-
     public Text pointsText;
+    public Text FinalScoreText;
+    public Text ExtraPointsText;
+
     public void Setup(int score)
     {
         gameObject.SetActive(true);
-        pointsText.text = "Score: " + score.ToString();
+        pointsText.text = "Fruit Caught: " + score.ToString();
+        FinalScoreText.text = "Final Score: " + ScoreManager.instance.finalScore.ToString();
+        ExtraPointsText.text = "Extra Points: " + ScoreManager.instance.extraScore.ToString();
     }
 
     public void RestartButton()

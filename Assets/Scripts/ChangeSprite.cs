@@ -4,16 +4,29 @@ using UnityEngine;
 
 public class ChangeSprite : MonoBehaviour
 {
+    public static ChangeSprite instance;
+
     [SerializeField] Sprite[] charcterSprites;
+    
     private Sprite newCharacter;
+    private void Awake()
+    {
+        instance = this;
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        System.Console.WriteLine(ScoreManager.score);
 
-        if (ScoreManager.score >= 50)
+        if (ScoreManager.instance.scoreCounter >= 50 && ScoreManager.instance.scoreCounter <= 100)
         {
             newCharacter = charcterSprites[1];
+        }
+        else if (ScoreManager.instance.scoreCounter >= 100)
+        {
+            newCharacter = charcterSprites[0];
+            ScoreManager.instance.scoreCounter = 0;
+            ScoreManager.instance.extraScore += 5;
+            BoxController.instance.SpawnCrate();
         }
         else
         {

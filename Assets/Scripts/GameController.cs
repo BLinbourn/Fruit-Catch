@@ -15,6 +15,7 @@ public class GameController : MonoBehaviour
 
     public void GameOver()
     {
+        ScoreManager.instance.AddExtraScore(); 
         GameOverScreen.Setup(ScoreManager.score);
     }
 }

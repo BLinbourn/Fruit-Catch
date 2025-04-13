@@ -50,6 +50,8 @@ public class BoxController : MonoBehaviour
             vectorX = -9f;
             vectorY = 3.1f;
             ScoreManager.instance.scoreBoxCounter = 0;
+            ScoreManager.instance.extraScore += 10;
+            Debug.Log(ScoreManager.instance.extraScore);
             StartCoroutine(TruckController.instance.TruckMovement());
         }
 

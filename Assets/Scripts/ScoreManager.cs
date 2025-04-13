@@ -10,10 +10,12 @@ public class ScoreManager : MonoBehaviour
     public Text ScoreText;
     public Text HighscoreText;
 
-    public static int score = 0;
-    public int scoreCounter;
-    public int scoreBoxCounter;
+    [HideInInspector] public static int score = 0;
+    [HideInInspector] public int finalScore = 0;
+    [HideInInspector] public int scoreCounter = 0;
+    [HideInInspector] public int scoreBoxCounter = 0;
     int highscore = 0;
+    [HideInInspector] public int extraScore = 0;
 
     private void Awake()
     {
@@ -70,5 +72,10 @@ public class ScoreManager : MonoBehaviour
         {
             PlayerPrefs.SetInt("highscore", score);
         }
+    }
+
+    public void AddExtraScore ()
+    {
+        finalScore = score + extraScore;
     }
 }

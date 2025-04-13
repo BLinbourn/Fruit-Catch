@@ -25,6 +25,7 @@ public class ChangeSprite : MonoBehaviour
         {
             newCharacter = charcterSprites[0];
             ScoreManager.instance.scoreCounter = 0;
+            ScoreManager.instance.extraScore += 5;
             BoxController.instance.SpawnCrate();
         }
         else

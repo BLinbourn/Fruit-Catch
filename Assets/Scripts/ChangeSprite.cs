@@ -17,11 +17,11 @@ public class ChangeSprite : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
 
-        if (ScoreManager.instance.scoreCounter >= 50 && ScoreManager.instance.scoreCounter <= 100)
+        if (ScoreManager.instance.scoreCounter >= 25 && ScoreManager.instance.scoreCounter <= 50)
         {
             newCharacter = charcterSprites[1];
         }
-        else if (ScoreManager.instance.scoreCounter >= 100)
+        else if (ScoreManager.instance.scoreCounter >= 50)
         {
             newCharacter = charcterSprites[0];
             ScoreManager.instance.scoreCounter = 0;

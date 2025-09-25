@@ -6,10 +6,13 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
 
-public class MainMenu : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class MainMenu : MonoBehaviour
 {
-    public TMP_Text startButton;
-    public TMP_Text quitButton;
+    public TMP_Text startButtonText;
+    public TMP_Text quitButtonText;
+
+    public Button startButton;
+    public Button quitButton;
 
     public void PlayGame()
     {
@@ -22,15 +25,27 @@ public class MainMenu : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         Application.Quit();
     }
 
-    public void OnPointerEnter(PointerEventData eventData)
+    public void StartButtonHooverOn()
     {
-        startButton.color = Color.red;
-        quitButton.color = Color.blue;
+        startButtonText.color = Color.white;
+        startButton.image.color = new Color(0.24f, 0.55f, 1f);
     }
 
-    public void OnPointerExit(PointerEventData eventData)
+    public void StartButtonHooverOff()
     {
-        startButton.color = Color.blue;
-        quitButton.color = Color.red;
+        startButtonText.color = Color.black;
+        startButton.image.color = new Color(0.42f, 0.65f, 0.97f);
+    }
+
+    public void ExitButtonHooverOn()
+    {
+        quitButtonText.color = Color.white;
+        quitButton.image.color = new Color(0.24f, 0.55f, 1f);
+    }
+
+    public void ExitButtonHooverOff()
+    {
+        quitButtonText.color = Color.black;
+        startButton.image.color = new Color(0.42f, 0.65f, 0.97f);
     }
 }

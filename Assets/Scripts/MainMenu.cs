@@ -28,24 +28,24 @@ public class MainMenu : MonoBehaviour
     public void StartButtonHooverOn()
     {
         startButtonText.color = Color.white;
-        startButton.image.color = new Color(0.13f, 0.02f, 71f);
+        startButton.image.color = new Color(0.18f, 0.22f, 0.29f);
     }
 
     public void StartButtonHooverOff()
     {
         startButtonText.color = Color.black;
-        startButton.image.color = new Color(0.42f, 0.65f, 0.97f);
+        startButton.image.color = new Color(0.72f, 0.97f, 0.97f);
     }
 
     public void ExitButtonHooverOn()
     {
         quitButtonText.color = Color.white;
-        quitButton.image.color = new Color(0.13f, 0.02f, 71f);
+        quitButton.image.color = new Color(0.18f, 0.22f, 0.29f);
     }
 
     public void ExitButtonHooverOff()
     {
         quitButtonText.color = Color.black;
-        quitButton.image.color = new Color(0.42f, 0.65f, 0.97f);
+        quitButton.image.color = new Color(0.72f, 0.97f, 0.97f);
     }
 }
